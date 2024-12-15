@@ -1,0 +1,16 @@
+{
+  "name": "serverest-api-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^13.16.1"
+  },
+  "scripts": {
+    "cy:test-headless-dev": "cypress run --browser chrome --env ENV=dev",
+    "cy:test-ui-dev": "cypress open --browser chrome --env ENV=dev"
+  },
+  "author": "Jacson Mendes",
+  "license": "ISC"
+}
