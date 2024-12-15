@@ -1,6 +1,6 @@
 <img src="https://front.serverest.dev/static/media/serverestlogo1.532833ba.png" alt="Logo" width="200">
 
-# ServeRest Automation E2E Project
+# ServeRest Automation API Project
 
 [![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
 
@@ -31,7 +31,7 @@ Follow these steps to set up and run the automation project:
 
 2. Navigate to the project folder:
    ```bash
-   cd serverest-e2e-automation
+   cd serverest-api-automation
    ```
 
 3. Make sure you are in the project's root folder (where the `package.json` file is located).
