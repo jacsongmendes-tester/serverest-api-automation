@@ -37,11 +37,35 @@ Cypress.Commands.add('generateToken', () => {
         method: 'POST',
         url: `${Cypress.env('baseUrl')}/login`,
         body: {
-            email: 'fulano@qa.com',
-            password: 'teste'
+            email: Cypress.env('email'),
+            password:  Cypress.env('password')
         }
     }).then((response) => {
-        cy.log(response.body.authorization)
         Cypress.env('authToken', response.body.authorization)
     })
+})
+
+Cypress.Commands.add('createProduct', (productName, price, description, quantity, failOnStatusCode = true) => {
+    return cy.request({
+        method: 'POST',
+        url: `${Cypress.env('baseUrl')}/produtos`,
+        headers: { Authorization:  Cypress.env('authToken') },
+        body: {
+            nome: productName,
+            preco: price,
+            descricao: description,
+            quantidade: quantity,
+        },
+        failOnStatusCode
+    });
+})
+
+
+Cypress.Commands.add('createUser',(userData, failOnStatusCode = true) => {
+    return cy.request({
+        method: 'POST',
+        url: `${Cypress.env('baseUrl')}/usuarios`,
+        body: userData,
+        failOnStatusCode
+    });
 })
