@@ -10,6 +10,7 @@ module.exports = defineConfig({
     screenshotOnRunFailure: true,
     watchForFileChanges: false,
     experimentalStudio: false,
+    experimentalRunAllSpecs: true,
     retries: {
       runMode: 2,
       openMode: 0
